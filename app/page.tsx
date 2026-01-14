@@ -3,6 +3,7 @@ import Hero from "@/components/sections/Hero";
 import TechStack from "@/components/sections/TechStack";
 import Projects from "@/components/sections/Projects";
 import Image from "next/image";
+import About from "@/components/sections/About";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero/>
       <TechStack/>
       <Projects/>
+      <About/>
     </div>
   );
 }
