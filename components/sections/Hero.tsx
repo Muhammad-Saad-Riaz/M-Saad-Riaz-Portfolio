@@ -121,6 +121,7 @@ function Hero() {
             href="https://github.com/Muhammad-Saad-Riaz"
             target="_blank"
             className="hover:text-white transition-colors"
+            rel="noopener noreferrer"
           >
             <Github className="w-6 h-6" />
           </Link>
@@ -128,6 +129,7 @@ function Hero() {
             aria-label="Linkedin Profile"
             href="https://www.linkedin.com/in/muhammad-saad-riaz/"
             target="_blank"
+            rel="noopener noreferrer"
             className="hover:text-blue-500 transition-colors"
           >
             <Linkedin className="w-6 h-6" />

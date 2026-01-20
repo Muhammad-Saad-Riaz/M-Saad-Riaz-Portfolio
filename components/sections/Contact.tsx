@@ -94,6 +94,7 @@ const Contact = () => {
             <Link
               href="https://github.com/Muhammad-Saad-Riaz"
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors"
               aria-label="GitHub profile"
             >
@@ -104,6 +105,7 @@ const Contact = () => {
             <Link
               href="https://linkedin.com/in/muhammad-saad-riaz"
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-zinc-400 hover:text-blue-600 transition-colors"
               aria-label="LinkedIn profile"
             >
@@ -113,6 +115,7 @@ const Contact = () => {
             <Link
               href="https://facebook.com/profile.php?id=61581438106978"
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-zinc-400 hover:text-blue-400 transition-colors"
               aria-label="Facebook profile"
             >
@@ -122,6 +125,7 @@ const Contact = () => {
             <Link
               href="https://wa.me/+923264737989"
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-zinc-400 hover:text-green-500 transition-colors"
               aria-label="WhatsApp profile"
             >

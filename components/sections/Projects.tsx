@@ -125,6 +125,7 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
             <Link
               href={project.githubUrl}
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition-colors"
             >
               <Github size={20} />
@@ -133,6 +134,7 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
             <Link
               href={project.liveUrl}
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center text-sm text-zinc-400 hover:text-red-600 transition-colors"
             >
               Live Demo <ArrowUpRight size={20} />
@@ -178,7 +180,7 @@ export default function Projects() {
             className="rounded-full p-6 px-10 text-base"
             asChild
           >
-            <Link href="https://github.com/Muhammad-Saad-Riaz" target="_blank">
+            <Link href="https://github.com/Muhammad-Saad-Riaz" target="_blank" rel="noopener noreferrer">
               View Full Project Archive <ExternalLink size={20} />
             </Link>
           </Button>

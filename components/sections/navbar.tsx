@@ -66,8 +66,7 @@ export function Navbar() {
             href="/"
             className="flex items-center gap-2 font-bold text-xl group"
           >
-            <div className="h-8 w-8 bg-linear-to-br from-white to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-blue-500/20">
-              {/* <Sparkles className="text-white h-4 w-4" /> */}
+            <div className="h-8 w-8 bg-linear-to-br from-white  to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-blue-500/20">
               <Image
                 src="/MSR t.png"
                 alt="Profile"

@@ -51,7 +51,7 @@ export default function About() {
                   src="/msr.png"
                   alt="Muhammad Saad Riaz"
                   fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  className="object-cover transition-transform duration-500 hover:scale-105 rounded-full"
                 />
               </div>
             </div>
