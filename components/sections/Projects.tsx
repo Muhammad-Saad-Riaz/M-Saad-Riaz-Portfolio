@@ -15,6 +15,8 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "../ui/button";
+import { Lens } from "@/components/ui/lens"
+import { AuroraText } from "@/components/ui/aurora-text"
 
 // --- Project Data
 const projects = [
@@ -80,10 +82,10 @@ const projects = [
 const ProjectCard = ({ project, index }: { project: any; index: number }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-50px" }}
       className="h-full"
     >
       <Card className="w-full max-w-sm border-none p-0 shadow-none bg-transparent">
@@ -92,6 +94,7 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
           className="pt-6 group hover:-translate-y-1 transition-transform duration-300"
         >
           <CardHeader className="w-full">
+            <Lens>
             <Image
               src={project.image}
               alt={project.title}
@@ -99,6 +102,7 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
               height={320}
               className="object-contain rounded-lg transition-transform duration-500 hover:scale-105"
             />
+            </Lens>
             <CardTitle className="text-2xl">{project.title}</CardTitle>
             <p className="text-xs uppercase tracking-widest text-zinc-500">
               Frontend • UI • Animations
@@ -152,7 +156,7 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            Featured <span className="text-blue-500">Projects</span>
+            Featured <AuroraText>Projects</AuroraText>
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">
             A selection of projects that showcase my passion for building

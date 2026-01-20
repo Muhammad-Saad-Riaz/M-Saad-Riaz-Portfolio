@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Code2, Rocket, Heart, Sparkle, Laptop } from "lucide-react";
 import Image from "next/image";
+import { AuroraText } from "@/components/ui/aurora-text"
 
 const timeline = [
   {
@@ -64,7 +65,7 @@ export default function About() {
             className="md:col-span-7"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              About <span className="text-blue-500">Me</span>
+              About <AuroraText>Me</AuroraText>
             </h2>
             <div className="space-y-4 text-zinc-400 text-lg leading-relaxed">
               <p>

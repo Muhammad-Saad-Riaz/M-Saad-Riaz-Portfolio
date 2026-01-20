@@ -6,6 +6,8 @@ import { Linkedin, Github, Facebook, Sparkles, Check, Copy, Mail } from "lucide-
 import { useState } from "react";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
+import { AuroraText } from "@/components/ui/aurora-text"
+import Image from "next/image";
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
@@ -32,13 +34,20 @@ const Contact = () => {
           {/* Icon */}
           <div className="flex justify-center mb-6">
             <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground">
-              <Sparkles className="h-7 w-7" />
+              {/* <Sparkles className="h-7 w-7" /> */}
+              <Image
+                src="/MSR t.png"
+                alt="Profile"
+                width={40}
+                height={40}
+                className="pt-1"
+              />
             </div>
           </div>
 
           {/* Headline */}
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            Ready to build <span className="text-blue-500">something great?</span>
+            Ready to build <AuroraText>something great?</AuroraText>
           </h2>
 
           {/* Subtext */}

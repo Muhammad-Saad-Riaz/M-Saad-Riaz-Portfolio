@@ -2,11 +2,22 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence,Variants } from "framer-motion";
 import { Menu, Sparkles, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { BorderBeam } from "@/components/ui/border-beam";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
+import { AuroraText } from "@/components/ui/aurora-text"
+import Image from "next/image";
+
+// Entrance Animation for the Navbar
+const entranceVariants: Variants = {
+  hidden: { y: -20, opacity: 0 },
+  visible: { 
+    y: 0, 
+    opacity: 1,
+    transition: { duration: 0.4, ease: "easeOut" }
+  }
+};
 
 const navItems = [
   { name: "Projects", href: "/#projects" },
@@ -40,8 +51,9 @@ export function Navbar() {
     <nav className="fixed top-0 inset-x-0 z-50 flex justify-center p-4">
       <motion.div
         ref={navRef}
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        variants={entranceVariants}
+        initial="hidden"
+        animate="visible"
         className={cn(
           "flex flex-col border transition-all rounded-[28px] duration-300 w-full max-w-2xl relative overflow-hidden",
           scrolled || isOpen
@@ -54,11 +66,18 @@ export function Navbar() {
             href="/"
             className="flex items-center gap-2 font-bold text-xl group"
           >
-            <div className="h-8 w-8 bg-linear-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-blue-500/20">
-              <Sparkles className="text-white h-4 w-4" />
+            <div className="h-8 w-8 bg-linear-to-br from-white to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-blue-500/20">
+              {/* <Sparkles className="text-white h-4 w-4" /> */}
+              <Image
+                src="/MSR t.png"
+                alt="Profile"
+                width={24}
+                height={24}
+                className="pt-1"
+              />
             </div>
             <span className="tracking-tighter text-white">
-              Muhammad <span className="text-blue-500">Saad Riaz</span>
+              Muhammad <AuroraText>Saad Riaz</AuroraText>
             </span>
           </Link>
 
@@ -134,7 +153,7 @@ export function Navbar() {
           )}
         </AnimatePresence>
 
-        {(scrolled || isOpen) && (
+        {/* {(scrolled || isOpen) && (
           <BorderBeam
             duration={4}
             size={100}
@@ -143,7 +162,7 @@ export function Navbar() {
             borderWidth={1}
             className="pointer-events-none"
           />
-        )}
+        )} */}
       </motion.div>
     </nav>
   );
