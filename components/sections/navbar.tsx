@@ -72,6 +72,8 @@ export function Navbar() {
                 alt="Profile"
                 width={24}
                 height={24}
+                priority
+                fetchPriority="high"
                 className="pt-1"
               />
             </div>
