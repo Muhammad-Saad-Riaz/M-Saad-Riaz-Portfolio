@@ -19,11 +19,11 @@ export default function Home() {
 
       <TechStack/>
 
-      <section id="projects">
+      <section id="projects" style={{ contentVisibility: 'auto' }}>
         <Projects/>
       </section>
 
-      <section id="about">
+      <section id="about" style={{ contentVisibility: 'auto' }}>
         <About/>
       </section>
       
